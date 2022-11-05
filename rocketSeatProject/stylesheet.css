@@ -10,9 +10,18 @@ ul {
 
 body{
     background-color: #121214;
-    background-image: url(./imagens/versoesBackGround/backGroundBlue.svg);
+    background-image: url(./imagens/versoesBackGround/backGroundBlue.svg);        
     background-position-x: center;
-    background-position-y: 55,6%;
+    background-position-y: 50.6%;
+    } 
+
+@media only screen and (min-device-width: 240px) and (max-device-width: 844px){
+    body{
+        background-color: #121214;
+        background-image: url(./imagens/versoesBackGround/backGroundBlueMobile.svg);
+        background-position-x: center;
+        background-position-y: 50%;
+    } 
 }
 
 body *{
@@ -61,6 +70,22 @@ header{
     text-transform: uppercase;
 }
 
+@media only screen and (min-device-width: 240px) and (max-device-width: 844px) {
+    .card ul{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 200px;
+    }
+}
+
+.card{
+    display: inline-block;
+    align-items: center;
+    gap: 32px;
+}
+
+
 .card ul{
     display: flex;
     flex-direction: column;
@@ -75,6 +100,7 @@ header{
 }
 
 .card ul li + li{
+    
     padding-top: 24px;
     border-top: 1px solid #323238;
 }

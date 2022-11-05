@@ -19,6 +19,7 @@ return`
 `
 }
 
+
 document.querySelector('#app').innerHTML = `
 <header>
     <img src="./imagens/logoNLW/logoNLW.svg" alt="Logotipo NLW">
@@ -31,7 +32,17 @@ document.querySelector('#app').innerHTML = `
     
         ${
         criaCartao("21/11", "Segunda",
-        criaJogo("england", "10:00", "iran") + criaJogo("united states", "16:00", "wales")
+        criaJogo("england", "10:00", "iran") + criaJogo("united states", "16:00", "wales") + criaJogo("senegal", "13:00","netherlands")
         )}
+
+        ${
+            criaCartao("22/11", "Terça",
+            criaJogo("argentina", "07:00", "saudi arabia") + criaJogo("denmark","10:00","tunisia") + criaJogo("mexico","13:00","poland")  + criaJogo("france","16:00","australia")
+        )}
+        ${
+            criaCartao("22/11", "Terça",
+            criaJogo("argentina", "07:00", "saudi arabia") + criaJogo("denmark","10:00","tunisia") + criaJogo("mexico","13:00","poland")  + criaJogo("france","16:00","australia")
+        )}   
+        
     </main>
-`
+    `
