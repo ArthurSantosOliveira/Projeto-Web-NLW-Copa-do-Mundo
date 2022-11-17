@@ -11,18 +11,9 @@ ul {
 body{
     background-color: #121214;
     background-image: url(./imagens/versoesBackGround/backGroundBlue.svg);        
-    background-position-x: center;
-    background-position-y: 50.6%;
-    } 
+    
 
-@media only screen and (min-device-width: 240px) and (max-device-width: 844px){
-    body{
-        background-color: #121214;
-        background-image: url(./imagens/versoesBackGround/backGroundBlueMobile.svg);
-        background-position-x: center;
-        background-position-y: 50%;
-    } 
-}
+} 
 
 body *{
     font-family: 'Roboto', sans-serif;
@@ -30,19 +21,22 @@ body *{
 
 #app{
     width: fit-content;
-    margin: 52px auto;   
+    margin: auto;   
+    padding-top: 52px
 }
 
 header{
-    margin-bottom: 63px;    
+    display: flex;
+    align-items: center;
 }
-#cards{
+
+#cartoes{
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.card{
+.cartao{
     padding: 32px 23px;
     text-align: center;
     background-color: #1d1c19;
@@ -50,7 +44,7 @@ header{
     border-radius: 6px;
 }
 
-.card h2{
+.cartao h2{
     display: flex;
     gap: 16px;
     justify-content: center;
@@ -64,14 +58,14 @@ header{
     border: 1px solid #f7dd43;
 }
 
-.card h2 span{
+.cartao h2 span{
     color: #e1e1e6;
     font-size: 14px;
     text-transform: uppercase;
 }
 
 @media only screen and (min-device-width: 240px) and (max-device-width: 844px) {
-    .card ul{
+    .cartao ul{
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -79,35 +73,70 @@ header{
     }
 }
 
-.card{
+.cartao{
     display: inline-block;
     align-items: center;
     gap: 32px;
 }
 
-
-.card ul{
+.cartao ul{
     display: flex;
     flex-direction: column;
     gap: 24px;
     width: 200px;
 }
 
-.card ul li{
+.cartao ul li{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.card ul li + li{
+.cartao ul li + li{
     
     padding-top: 24px;
     border-top: 1px solid #323238;
 }
 
-.card ul li strong{
+.cartao ul li strong{
     font-weight: 900;
     font-size: 36px;
     line-height: 125%;
     color: #e1e1e6;
 }
+
+.cartao h2.hover, 
+.cartao ul li strong:hover,
+.cartao ul li img:hover{
+    transform: scale(1.1);
+}
+
+.cartao h2, 
+.cartao ul li strong:hover,
+.cartao ul li img:hover{
+    transition: transform 0.3;
+}
+
+.cartao{
+    animation: appear .7s;
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*faz com que nas telas de 700px ou mais os conteudos sejam ajustados lado a lado e ao preencher o espaco lateral sejam "jogados para baixo" ele nao transborda o 670px de max-width*/
+@media (min-width: 700px){
+    #cartoes{
+        max-width: 670px; 
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
