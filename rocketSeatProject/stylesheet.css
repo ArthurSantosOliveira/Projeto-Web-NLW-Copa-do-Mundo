@@ -27,7 +27,7 @@ body *{
 
 header{
     display: flex;
-    align-items: center;
+    justify-content:center ;
 }
 
 #cartoes{
@@ -133,7 +133,7 @@ header{
 /*faz com que nas telas de 700px ou mais os conteudos sejam ajustados lado a lado e ao preencher o espaco lateral sejam "jogados para baixo" ele nao transborda o 670px de max-width*/
 @media (min-width: 700px){
     #cartoes{
-        max-width: 670px; 
+        max-width: 1500px; 
         flex-direction: row;
         flex-wrap: wrap;
     }

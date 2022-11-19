@@ -1,10 +1,16 @@
 function criaJogo(timeUm, hora, timeDois){
 return`       
-<li>
-    <img src="./imagens/bandeirasTimes/${timeUm}.svg" alt="Bandeira da ${timeUm}">       
-    <strong>${hora}</strong>        
-    <img src="./imagens/bandeirasTimes/${timeDois}.svg" alt="Bandeira do ${timeDois}">             
-</li>
+<nav class="menu">
+        <li>
+            <button type="button" class="botao" >
+                <img src="./imagens/bandeirasTimes/${timeUm}.svg" alt="Bandeira da ${timeUm}">       
+            </button>
+            <strong>${hora}</strong>        
+            <button type="button" class="botao">
+                <img src="./imagens/bandeirasTimes/${timeDois}.svg" alt="Bandeira do ${timeDois}">
+            </button>        
+        </li>
+</nav>
 `
 }
 
@@ -19,8 +25,8 @@ function criaCartao(data,dia,criaJogo){
     </ul>
 </div>
 `
-}
 
+}
 
 document.querySelector('#cartoes').innerHTML = 
         criaCartao("20/11","Domingo",
@@ -32,8 +38,40 @@ document.querySelector('#cartoes').innerHTML =
         criaCartao("22/11", "Terça",
         criaJogo("argentina", "07:00", "saudi arabia") + criaJogo("denmark","10:00","tunisia") + criaJogo("mexico","13:00","poland")  + criaJogo("france","16:00","australia"))
         +
-        criaCartao("22/11", "Terça",
-        criaJogo("argentina", "07:00", "saudi arabia") + criaJogo("denmark","10:00","tunisia") + criaJogo("mexico","13:00","poland")  + criaJogo("france","16:00","australia"))
+        criaCartao("23/11", "Quarta",
+        criaJogo("morocco", "07:00", "croatia") + criaJogo("germany", "10:00", "japan") + 
+        criaJogo("spain", "13:00", "costa rica") + criaJogo("belgium","16:00","canada"))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        +
+        criaCartao("","",
+        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
         
-
-    
