@@ -44,6 +44,8 @@ header{
     border-radius: 6px;
 }
 
+
+
 .cartao h2{
     display: flex;
     gap: 16px;
@@ -92,10 +94,12 @@ header{
     justify-content: space-between;
 }
 
+
 .cartao ul li + li{
-    
     padding-top: 24px;
     border-top: 1px solid #323238;
+    
+
 }
 
 .cartao ul li strong{
@@ -117,10 +121,18 @@ header{
     transition: transform 0.3;
 }
 
+
 .cartao{
     animation: appear .7s;
 }
 
+.cartao.hover{
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+.cartao__resultados.open{
+    transform: translateX(0);
+}
 @keyframes appear {
     0%{
         opacity: 0;
@@ -138,5 +150,3 @@ header{
         flex-wrap: wrap;
     }
 }
-
-

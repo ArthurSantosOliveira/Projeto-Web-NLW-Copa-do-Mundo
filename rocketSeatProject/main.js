@@ -2,17 +2,21 @@ function criaJogo(timeUm, hora, timeDois){
 return`       
 <nav class="menu">
         <li>
-            <button type="button" class="botao" >
-                <img src="./imagens/bandeirasTimes/${timeUm}.svg" alt="Bandeira da ${timeUm}">       
-            </button>
+            <img src="./imagens/bandeirasTimes/${timeUm}.svg" alt="Bandeira da ${timeUm}">       
             <strong>${hora}</strong>        
-            <button type="button" class="botao">
-                <img src="./imagens/bandeirasTimes/${timeDois}.svg" alt="Bandeira do ${timeDois}">
-            </button>        
-        </li>
+            <img src="./imagens/bandeirasTimes/${timeDois}.svg" alt="Bandeira do ${timeDois}">
+        </li>     
 </nav>
 `
 }
+
+
+/* testando funcionalidade do botao
+function alerta(){
+    alert("ok")
+}
+*/
+
 
 let delay = -0.3;
 function criaCartao(data,dia,criaJogo){
@@ -25,7 +29,17 @@ function criaCartao(data,dia,criaJogo){
     </ul>
 </div>
 `
+}
 
+function criaResultado(timeUm, resultado, timeDois){
+return`
+<nav class="menu">
+    <li>
+    <img src"./imagensbandeirasTimes/${timeUm}.svg" alt="bandeira do ${timeUm}">
+    <strong>${resultado}></strong>
+    <img src="./imagensbandeirasTimes/${timeUm}.svg" alt="bandeira do ${timeDois}">
+    </li>
+`
 }
 
 document.querySelector('#cartoes').innerHTML = 
@@ -42,8 +56,8 @@ document.querySelector('#cartoes').innerHTML =
         criaJogo("morocco", "07:00", "croatia") + criaJogo("germany", "10:00", "japan") + 
         criaJogo("spain", "13:00", "costa rica") + criaJogo("belgium","16:00","canada"))
         +
-        criaCartao("","",
-        criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
+        criaCartao("24/11","Quinta",
+        criaJogo("switzerland","07:00","cameroon")+criaJogo("uruguay","10:00","south korea")+criaJogo("portugal","13:00","ghana")+criaJogo("brazil","16:00","serbia"))
         +
         criaCartao("","",
         criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
@@ -74,4 +88,4 @@ document.querySelector('#cartoes').innerHTML =
         +
         criaCartao("","",
         criaJogo("","","")+criaJogo("","","")+criaJogo("","","")+criaJogo("","",""))
-        
+
